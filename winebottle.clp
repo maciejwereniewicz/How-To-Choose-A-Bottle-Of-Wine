@@ -123,6 +123,15 @@
    =>
    (retract ?currentAnswer)
    (retract ?currentQuestion)
+   (assert (question "For my wine collection" "Yes"))
+)
+
+(defrule collection-yes
+   ?currentAnswer <- (answer "Yes")
+   ?currentQuestion <- (question "For my wine collection" "Yes")
+   =>
+   (retract ?currentAnswer)
+   (retract ?currentQuestion)
    (assert (question "New vs. old world" "What?" "Old!" "New"))
 )
 
