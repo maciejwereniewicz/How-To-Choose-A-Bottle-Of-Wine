@@ -82,7 +82,7 @@ def display_result(result):
     for widget in answers_frame.winfo_children():
         widget.destroy()
 
-    confirm_button.configure(text="Exit", command=root.quit)
+    confirm_button.configure(text="Exit")
 
 
 def enable_confirm():
@@ -120,5 +120,4 @@ system = ExpertSystem('winebottle.clp')
 
 setup_ui(root)
 load_clips()
-
 root.mainloop()
